@@ -12,31 +12,31 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
-.  
-.  
+.  To prove this there needs to exist constants c and n0 such that 2^(n+1) <= c*2n
+.  for all n > n0. Simplify to 2*2^n <= c*2n. Divide both sides by 2^n to get 2 <= 
+.  c * 2^(n-1) for all n >= n0. So yes 2^(n+1) is in 0(2^n) where c >= 2.
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
-.  
-.  
-.  
-.  
+.  See if there exists constant c and n0 such that 2^2^n <= c*2^n for all n >= n0.
+.  Simplify the equation to 4^n <= c * ^n. Divid both sides by 2^n and get 2^n^n
+.  <= c for all n > n0. However the left side grows much faster than the right so 
+.  theres no constant c to satisfy the inequality for all n. therefor 2^n^n is not
+.  in O(2^n)
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
-.  
-.  
-.  
+.  Show there exists constnats c and n0 such that n^1.01 < c * log2n for all n >= n0
+.  Taking the logarithm of both sides its log2(n^1.01) <= log2(c*log2n) which 
+.  simplofoes to 1.01 * log2n <= log2c + log2log2n. The left side grows much faster 
+.  than the right. Therefore there is no constant c that can satisfy the inequality for all n so n^1.01 is not in O(log2n).
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
-.  
-.  
-.  
+.  To prove this there needs to exist constants c and n0 such that n^1.01 >= c *
+.  log2n for all n > n0. For the same reasons above the equations simplify to 
+.  1.01 * log2n >= log2c + log2log2n. Since the right hand grows much faster than the 
+.  right side the inequality is satisfied for all n so n^1.01 is in Omega(log2n)
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
-.  
+.  Is √n ∈ O((logn)3)?
+.  No sqrt(n) is not in 0((
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
